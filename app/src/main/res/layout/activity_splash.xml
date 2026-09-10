@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- Stylish TD Logo -->
+        <FrameLayout
+            android:layout_width="150dp"
+            android:layout_height="150dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/ring_logo" />
+
+            <LinearLayout
+                android:layout_width="138dp"
+                android:layout_height="138dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_td_circle"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TD"
+                    android:textSize="56sp"
+                    android:textStyle="bold|italic"
+                    android:textColor="#00F5FF"
+                    android:letterSpacing="0.05" />
+
+                <View
+                    android:layout_width="60dp"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="2dp"
+                    android:background="#A855F7" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="TEAMDARK.AI"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="#F1F5F9"
+            android:letterSpacing="0.15" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="OFFLINE • UNLIMITED • SMOOTH"
+            android:textSize="11sp"
+            android:textColor="#00F5FF"
+            android:letterSpacing="0.2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="C++ • Java • Python • Lua • Mod"
+            android:textSize="12sp"
+            android:textColor="#94A3B8" />
+    </LinearLayout>
+
+    <!-- Bottom near home button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="12dp">
+
+        <View
+            android:layout_width="40dp"
+            android:layout_height="3dp"
+            android:layout_marginBottom="10dp"
+            android:background="#334155" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="POWERED BY DARK DEVEL"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="#FACC15"
+            android:letterSpacing="0.25" />
+    </LinearLayout>
+</RelativeLayout>
