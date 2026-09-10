@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="none">
+        <item android:id="@+id/m_login" android:title="👤 Login / Register" />
+        <item android:id="@+id/m_api" android:title="🔑 API Keys (10+ AI)" />
+        <item android:id="@+id/m_agent" android:title="🤖 Agent Mode (Premium)" />
+        <item android:id="@+id/m_premium" android:title="👑 Premium / Pay" />
+        <item android:id="@+id/m_owner" android:title="🛡 Owner Access" />
+        <item android:id="@+id/m_settings" android:title="⚙ Settings" />
+        <item android:id="@+id/m_logout" android:title="🚪 Logout" />
+    </group>
+</menu>
