@@ -11,8 +11,8 @@ android {
         applicationId "com.teamdark.ai"
         minSdk 24
         targetSdk 34
-        versionCode 3
-        versionName "3.0-online-agent"
+        versionCode 4
+        versionName "4.0-pro-chat"
         vectorDrawables { useSupportLibrary true }
     }
 

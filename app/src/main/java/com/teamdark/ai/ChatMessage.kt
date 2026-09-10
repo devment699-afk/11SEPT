@@ -3,5 +3,6 @@ package com.teamdark.ai
 data class ChatMessage(
     val isUser: Boolean,
     val text: String,
-    val imageUri: String? = null
+    val imageUri: String? = null,
+    val time: Long = System.currentTimeMillis()
 )

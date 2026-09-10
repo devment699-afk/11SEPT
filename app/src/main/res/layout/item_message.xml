@@ -3,68 +3,190 @@
     android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:paddingTop="4dp"
-    android:paddingBottom="4dp">
+    android:orientation="horizontal"
+    android:paddingTop="7dp"
+    android:paddingBottom="7dp"
+    android:paddingStart="2dp"
+    android:paddingEnd="2dp">
 
-    <ImageView
-        android:id="@+id/msgImage"
-        android:layout_width="180dp"
-        android:layout_height="180dp"
-        android:visibility="gone"
-        android:scaleType="centerCrop"
-        android:layout_marginBottom="6dp" />
+    <!-- Avatar -->
+    <TextView
+        android:id="@+id/avatar"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:gravity="center"
+        android:text="TD"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/avatar_ai" />
 
+    <!-- Content column -->
     <LinearLayout
-        android:id="@+id/bubble"
-        android:layout_width="wrap_content"
+        android:id="@+id/col"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="12dp">
+        android:layout_weight="1"
+        android:layout_marginStart="9dp"
+        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/msgText"
+        <!-- Name + time -->
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="15sp"
-            android:textColor="#F1F5F9" />
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
+            <TextView
+                android:id="@+id/senderName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TEAMDARK Agent"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#10B981" />
+
+            <TextView
+                android:id="@+id/msgTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="10:24"
+                android:textSize="10sp"
+                android:textColor="#5B6B85" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/msgImage"
+            android:layout_width="190dp"
+            android:layout_height="190dp"
+            android:visibility="gone"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="6dp" />
+
+        <!-- Main bubble -->
+        <LinearLayout
+            android:id="@+id/bubble"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:paddingStart="13dp"
+            android:paddingEnd="13dp"
+            android:paddingTop="11dp"
+            android:paddingBottom="11dp">
+
+            <TextView
+                android:id="@+id/msgText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14.5sp"
+                android:lineSpacingExtra="2dp"
+                android:textColor="#F1F5F9" />
+        </LinearLayout>
+
+        <!-- Code card (only when ``` present) -->
+        <LinearLayout
+            android:id="@+id/codeCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_code_header"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="12dp"
+                android:paddingEnd="6dp"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp">
+
+                <TextView
+                    android:id="@+id/codeLang"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="● code"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:textColor="#10B981" />
+
+                <TextView
+                    android:id="@+id/btnCopyCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:text="COPY CODE"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:textColor="#070B14"
+                    android:background="@drawable/btn_send" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/codeText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_code"
+                android:padding="12dp"
+                android:textSize="12.5sp"
+                android:textColor="#A7F3D0"
+                android:fontFamily="monospace" />
+        </LinearLayout>
+
+        <!-- Actions -->
         <LinearLayout
             android:id="@+id/aiActions"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:visibility="gone"
             android:orientation="horizontal"
-            android:layout_marginTop="8dp">
+            android:layout_marginTop="6dp">
 
             <TextView
                 android:id="@+id/btnCopy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="#0F172A"
-                android:paddingStart="12dp"
-                android:paddingEnd="12dp"
+                android:background="@drawable/bg_input"
+                android:paddingStart="13dp"
+                android:paddingEnd="13dp"
                 android:paddingTop="6dp"
                 android:paddingBottom="6dp"
-                android:text="⧉ COPY"
+                android:text="⧉ Copy"
                 android:textSize="11sp"
                 android:textStyle="bold"
-                android:textColor="#00F5FF" />
+                android:textColor="#10B981" />
 
             <TextView
                 android:id="@+id/btnShare"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:background="#0F172A"
-                android:paddingStart="12dp"
-                android:paddingEnd="12dp"
+                android:background="@drawable/bg_input"
+                android:paddingStart="13dp"
+                android:paddingEnd="13dp"
                 android:paddingTop="6dp"
                 android:paddingBottom="6dp"
-                android:text="SHARE"
+                android:text="↗ Share"
                 android:textSize="11sp"
                 android:textStyle="bold"
-                android:textColor="#A855F7" />
+                android:textColor="#818CF8" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_gravity="center_vertical"
+                android:text="✓✓"
+                android:textSize="10sp"
+                android:textColor="#10B981" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
