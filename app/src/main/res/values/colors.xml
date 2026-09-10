@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="bg_deep">#0A0E1A</color>
-    <color name="bg_card">#151B2E</color>
-    <color name="bg_card2">#1E2642</color>
-    <color name="neon_cyan">#00F5FF</color>
-    <color name="neon_purple">#A855F7</color>
-    <color name="neon_pink">#EC4899</color>
-    <color name="text_main">#F1F5F9</color>
-    <color name="text_dim">#94A3B8</color>
+    <color name="bg_deep">#070B14</color>
+    <color name="bg_card">#0E1626</color>
+    <color name="bg_card2">#16213A</color>
+    <color name="neon_cyan">#10B981</color>
+    <color name="neon_purple">#6366F1</color>
+    <color name="neon_pink">#F43F5E</color>
+    <color name="text_main">#F8FAFC</color>
+    <color name="text_dim">#8B9BB4</color>
     <color name="accent_gold">#FACC15</color>
-    <color name="user_bubble">#2563EB</color>
-    <color name="ai_bubble">#1E293B</color>
-    <color name="success">#22C55E</color>
+    <color name="user_bubble">#059669</color>
+    <color name="ai_bubble">#111C32</color>
+    <color name="success">#10B981</color>
 </resources>
